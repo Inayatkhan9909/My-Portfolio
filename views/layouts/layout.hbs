@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <title>My Portfolio</title>
+  <style>
+    html {
+      scroll-behavior:auto;
+    }
+     
+    .gradient-text {
+      background: linear-gradient(90deg, #ff7e5f, #e085db, #5a9fd3, #689341);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-size: 200% 200%;
+      animation: gradient-animation 4s linear infinite;
+    }
+
+    @keyframes gradient-animation {
+      0% {
+        background-position: 0% 50%;
+      }
+      100% {
+        background-position: 100% 50%;
+      }
+    }
+
+     .skill-bar {
+      height: 20px;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body class=" w-screen bg-gray-600 text-white">
+
+  <!-- Navbar -->
+
+    <nav class=" bg-gray-800 text-white  p-4 sticky top-0 w-screen z-10">
+    <div class="container bg-gray-800 w-10/12 mx-auto flex justify-between items-center">
+      <div class="flex gap-1">
+        <img src="/assets/Zma_photo_crip.jpg" width="50" class="rounded-full">
+        <div class="text-2xl font-bold">
+          INAYAT ULLAH KHAN
+          <span class="text-sm block">Full Stack Web Developer</span>
+        </div>
+      </div>
+      <ul class="flex space-x-10 mt-5 text-2xl " >
+        <li><a href="/" class="hover:text-gray-400">Home</a></li>
+        <li><a href="/about" class="hover:text-gray-400">About</a></li>
+        <li><a href="/projects" class="hover:text-gray-400">Projects</a></li>
+        <li><a href="/contact" class="hover:text-gray-400">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+
+  <!-- Main Content -->
+  <main class="mt-6">
+ {{{body}}}
+  </main> 
+   
+  <script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const scrollIcon = document.getElementById("scroll-icon");
+    const nextSection = document.getElementById("about");
+
+    scrollIcon.addEventListener("click", function() {
+      nextSection.scrollIntoView({ behavior: "smooth" });
+    });
+  });
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,213 @@
+   {{#if message}}
+    <span class="bg-blue-100 text-blue-700 px-4 py-2 rounded-md block">{{message}}</span>
+    {{/if}}
+<section id="home" class="text-center min-h-screen py-20 bg-gray-900  animate-fadeIn">
+  <div class="w-1/2 h-1/2 m-auto mt-20 text-center">
+    <h1 class="text-5xl  font-bold mb-5 gradient-text">Hello, I am Inayat</h1>
+    <p class="text-2xl gradient-text">I am a Full Stack Web Developer</p>
+    <p class="text-2xl gradient-text">I enjoy building things that live on the internet, from websites to web apps. </p>
+  </div>
+  <div class="w-1/2 h-1/2 m-auto mt-20 ">
+    <img id="scroll-icon" src="assets/down-chevron.png" class="m-auto animate-bounce cursor-pointer" width="80" alt="">
+  </div>
+</section>
+
+<div class="w-full h-1 bg-white"></div>
+
+<section id="about" class="text-center min-h-screen py-40 bg-gray-900 px-5  animate-fadeIn">
+  <div class="container mx-auto flex flex-col md:flex-row justify-center items-start">
+    <!-- About Me Section -->
+    <div class="w-full md:w-1/2 px-4 my-10 mb-10 md:mb-0">
+      <h1 class="text-4xl font-bold mb-4">About</h1>
+      <img src="/assets/Zma_photo_crip.jpg" width="250" class="rounded-full mx-auto mb-4">
+      <p class="text-lg">
+        I'm a Full Stack Web Developer based in Srinagar, India. I specialize in C#, ASP.NET Core, Node.js, React.js,
+        Redux, and SQL Server. I have a serious passion for creating intuitive, dynamic user experiences and solving
+        complex problems.
+        Let's build something amazing together! 🚀
+      </p>
+    </div>
+
+    <!-- Skills Section -->
+    <div class="w-full md:w-1/2 px-4">
+      <h1 class="text-4xl font-bold mb-4">Skills</h1>
+      <div class="space-y-2">
+        <!-- Skill 1 -->
+        <div>
+          <div class="flex items-center justify-between mb-2">
+            <span class="text-lg">HTML</span>
+            {{!-- <span class="text-lg">90%</span> --}}
+          </div>
+          <div class="w-full bg-gray-700">
+            <div class="bg-blue-500 skill-bar" style="width: 90%;"></div>
+          </div>
+        </div>
+        <!-- Skill 2 -->
+        <div>
+          <div class="flex items-center justify-between mb-2">
+            <span class="text-lg">CSS</span>
+            {{!-- <span class="text-lg">85%</span> --}}
+          </div>
+          <div class="w-full bg-gray-700">
+            <div class="bg-green-500 skill-bar" style="width: 85%;"></div>
+          </div>
+        </div>
+        <!-- Skill 3 -->
+        <div>
+          <div class="flex items-center justify-between mb-2">
+            <span class="text-lg">C#</span>
+            {{!-- <span class="text-lg">80%</span> --}}
+          </div>
+          <div class="w-full bg-grey-700">
+            <div class="bg-yellow-500 skill-bar" style="width: 80%;"></div>
+          </div>
+        </div>
+        <!-- Skill 4 -->
+        <div>
+          <div class="flex items-center justify-between mb-2">
+            <span class="text-lg">ASP.NET CORE</span>
+            {{!-- <span class="text-lg">70%</span> --}}
+          </div>
+          <div class="w-full bg-gray-700">
+            <div class="bg-purple-500 skill-bar" style="width: 75%;"></div>
+          </div>
+        </div>
+        <!-- Skill 5 -->
+        <div>
+          <div class="flex items-center justify-between mb-2">
+            <span class="text-lg">JavaScript</span>
+            {{!-- <span class="text-lg">75%</span> --}}
+          </div>
+          <div class="w-full bg-gray-700">
+            <div class="bg-red-500 skill-bar" style="width: 75%;"></div>
+          </div>
+        </div>
+        <!-- Skill 6 -->
+        <div>
+          <div class="flex items-center justify-between mb-2">
+            <span class="text-lg">React.js</span>
+            {{!-- <span class="text-lg">70%</span> --}}
+          </div>
+          <div class="w-full bg-gray-700">
+            <div class="bg-green-500 skill-bar" style="width: 70%;"></div>
+          </div>
+        </div>
+        <!-- Skill 7 -->
+        <div>
+          <div class="flex items-center justify-between mb-2">
+            <span class="text-lg">Next.js</span>
+            {{!-- <span class="text-lg">70%</span> --}}
+          </div>
+          <div class="w-full bg-gray-700">
+            <div class="bg-teal-300 skill-bar" style="width: 60%;"></div>
+          </div>
+        </div>
+        <!-- Skill 8 -->
+        <div>
+          <div class="flex items-center justify-between mb-2">
+            <span class="text-lg">Redux</span>
+            {{!-- <span class="text-lg">70%</span> --}}
+          </div>
+          <div class="w-full bg-gray-700">
+            <div class="bg-purple-500 skill-bar" style="width: 70%;"></div>
+          </div>
+        </div>
+
+        <!-- Skill 9 -->
+        <div>
+          <div class="flex items-center justify-between mb-2">
+            <span class="text-lg">SQL Server</span>
+            {{!-- <span class="text-lg">65%</span> --}}
+          </div>
+          <div class="w-full bg-gray-700">
+            <div class="bg-pink-500 skill-bar" style="width: 65%;"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="w-full h-1 bg-white"></div>
+
+<section id="projects" class="text-center min-h-screen py-40  bg-gray-900 animate-fadeIn">
+  <h1 class="text-4xl font-bold mb-4">My Projects</h1>
+  <div class="flex flex-col  gap-4">
+
+    <div class="flex   bg-gray-900 p-6 rounded-lg shadow-2xl">
+      <!-- Left Side: Images -->
+      <div class="w-full lg:w-1/2  md:flex-col flex gap-4 items-center justify-center mb-4 lg:mb-0">
+
+        <div class="flex flex-col gap-2 ">
+          <img src="assets/Screenshot 2024-05-24 001543.png" width="450"  alt="Project Image"
+            class="rounded-lg shadow-lg max-w-full object-contain ">
+          <img src="assets/Screenshot 2024-05-24 001611.png" width="450"  alt="Project Image"
+            class="rounded-lg shadow-lg max-w-full object-contain ">
+        </div>
+        {{!-- <div class="h-full">
+          <img src="assets/Screenshot 2024-05-24 001353.png" width="400"  alt="Project Image"
+          class="rounded-lg shadow-lg max-w-full object-contain ">
+        </div> --}}
+      </div>
+      <!-- Right Side: Details and Button -->
+     <div class="w-full lg:w-1/2 text-white p-4">
+    <h2 class="text-2xl font-bold mb-2">Internship and Job Providing Platform</h2>
+    <p class="mb-4">
+      This project is a web application built with ASP.NET Core and C# that facilitates the management of internships and job listings. It utilizes the Identity Framework for robust user authentication and authorization. The platform allows companies to post job openings and internships, and users can apply for these positions directly through the website.
+    </p>
+    <h3 class="text-xl font-semibold mb-2">Key Features:</h3>
+    <ul class="list-disc list-inside mb-4">
+      <li>User registration and login with role-based authorization.</li>
+      <li>Job and internship application management.</li>
+      <li>Secure user authentication using ASP.NET Core Identity.</li>
+      <li>Responsive design for seamless use across various devices.</li>
+    </ul>
+    <h3 class="text-xl font-semibold mb-2">Technologies Used:</h3>
+    <ul class="list-disc list-inside mb-4">
+      ASP.NET Core
+      C#
+      Entity Framework Core
+      ASP.NET Core Identity
+      SQL Server
+      Bootstrap for frontend design
+    </ul>
+    <a href="https://live-website-link.com" target="_blank"
+      class="bg-blue-500 text-white py-2 px-4 rounded-lg shadow hover:bg-blue-700 transition duration-300 ease-in-out">
+      Live Show
+    </a>
+  </div>
+
+    </div>
+
+    {{!-- <div class=" bg-gray-900 p-6 rounded-lg shadow-lg">Project 2</div>
+    <div class=" bg-gray-900 p-6 rounded-lg shadow-lg">Project 3</div> --}}
+  </div>
+</section>
+
+<section id="contact" class="text-center min-h-screen py-40 bg-gray-900 animate-fadeIn">
+  <h1 class="text-4xl font-bold mb-4 text-white">Contact Me</h1>
+  <form id="contactForm" action="/contact" method="post" class="space-y-4 max-w-md mx-auto">
+    <input type="text" name="name" placeholder="Name" class="w-full p-3 text-black  border rounded" required >
+    <input type="email" name="email" placeholder="Email" class="w-full p-3 text-black border rounded" required>
+    <textarea name="message" placeholder="Message" class="w-full p-3 text-black border rounded" required></textarea>
+    <button type="submit" class="bg-blue-500 text-white px-6 py-3 rounded hover:bg-blue-600">Send</button>
+  </form>
+  <div class="mt-8">
+    <h2 class="text-2xl font-semibold text-white">Connect with me:</h2>
+    <div class="flex justify-center space-x-4 mt-4">
+      <a href="mailto:khan99.inayat@gmail.com" class="text-gray-300 hover:text-white">
+        <i class="fas fa-envelope fa-2x"></i>
+      </a>
+      <a href="https://www.linkedin.com/in/inayat-ullah-khan-b428a32a3" target="_blank" class="text-gray-300 hover:text-white">
+        <i class="fab fa-linkedin fa-2x"></i>
+      </a>
+      <a href="https://github.com/Inayatkhan9909" target="_blank" class="text-gray-300 hover:text-white">
+        <i class="fab fa-github fa-2x"></i>
+      </a>
+      <a href="skype:live:.cid.c8a6cd617c320e9d?chat" class="text-gray-300 hover:text-white">
+        <i class="fab fa-skype fa-2x"></i>
+      </a>
+      <!-- Add other social media links as needed -->
+    </div>
+  </div>
+</section>

@@ -1,0 +1,31 @@
+   {{#if message}}
+    <span class="bg-blue-100 text-blue-700 px-4 py-2 rounded-md block">{{message}}</span>
+    {{/if}}
+<section id="contact" class="text-center min-h-screen py-10 bg-gray-900 animate-fadeIn">
+  <h1 class="text-4xl font-bold mb-4 text-white">Contact Me</h1>
+  <form id="contactForm" action="/contact" method="post" class="space-y-4 max-w-md mx-auto">
+    <input type="text" name="name" placeholder="Name" class="w-full p-3 text-black  border rounded" required >
+    <input type="email" name="email" placeholder="Email" class="w-full p-3 text-black border rounded" required>
+    <textarea name="message" placeholder="Message" class="w-full p-3 text-black border rounded" required></textarea>
+    <button type="submit" class="bg-blue-500 text-white px-6 py-3 rounded hover:bg-blue-600">Send</button>
+  </form>
+  <div class="mt-8">
+    <h2 class="text-2xl font-semibold text-white">Connect with me:</h2>
+    <div class="flex justify-center space-x-4 mt-4">
+      <a href="mailto:khan99.inayat@gmail.com" class="text-gray-300 hover:text-white">
+        <i class="fas fa-envelope fa-2x"></i>
+      </a>
+      <a href="https://www.linkedin.com/in/inayat-ullah-khan-b428a32a3" target="_blank" class="text-gray-300 hover:text-white">
+        <i class="fab fa-linkedin fa-2x"></i>
+      </a>
+      <a href="https://github.com/Inayatkhan9909" target="_blank" class="text-gray-300 hover:text-white">
+        <i class="fab fa-github fa-2x"></i>
+      </a>
+      <a href="skype:live:.cid.c8a6cd617c320e9d?chat" class="text-gray-300 hover:text-white">
+        <i class="fab fa-skype fa-2x"></i>
+      </a>
+      <!-- Add other social media links as needed -->
+    </div>
+  </div>
+</section>
+{{> footer}}
