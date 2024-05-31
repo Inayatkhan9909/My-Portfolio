@@ -4,13 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="/css/main.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <title>My Portfolio</title>
   <style>
     html {
-      scroll-behavior:auto;
+      scroll-behavior: auto;
     }
-     
+
     .gradient-text {
       background: linear-gradient(90deg, #ff7e5f, #e085db, #5a9fd3, #689341);
       -webkit-background-clip: text;
@@ -28,51 +28,111 @@
       }
     }
 
-     .skill-bar {
+    .skill-bar {
       height: 20px;
       border-radius: 10px;
     }
+
+    .dropdown-content {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: #333;
+      width: 100%;
+      z-index: 10;
+    }
+
+    .dropdown-content a {
+      padding: 10px;
+      text-align: center;
+      border-bottom: 1px solid #444;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #444;
+    }
+
+    @media (max-width: 640px) {
+      .dropdown-content {
+        display: flex;
+      }
+
+      .dropdown-toggle {
+        display: flex;
+      }
+
+      .nav-links {
+        display: none;
+      }
+    }
+
+    .hidden {
+      display: none;
+    }
   </style>
 </head>
-<body class=" w-screen bg-gray-600 text-white">
+<body class="text-white">
 
   <!-- Navbar -->
-
-    <nav class=" bg-gray-800 text-white  p-4 sticky top-0 w-screen z-10">
-    <div class="container bg-gray-800 w-10/12 mx-auto flex justify-between items-center">
+  <nav class="bg-gray-800 text-white p-4 sticky top-0 w-screen z-10">
+    <div class="container bg-gray-800 lg:w-10/12 md:w-full mx-auto flex justify-between items-center relative">
       <div class="flex gap-1">
         <img src="/assets/Zma_photo_crip.jpg" width="50" class="rounded-full">
-        <div class="text-2xl font-bold">
+        <div class="lg:text-2xl text-lg font-bold">
           INAYAT ULLAH KHAN
           <span class="text-sm block">Full Stack Web Developer</span>
         </div>
       </div>
-      <ul class="flex space-x-10 mt-5 text-2xl " >
+      <ul class="nav-links flex space-x-10 mt-5 lg:text-2xl text-lg">
         <li><a href="/" class="hover:text-gray-400">Home</a></li>
         <li><a href="/about" class="hover:text-gray-400">About</a></li>
         <li><a href="/projects" class="hover:text-gray-400">Projects</a></li>
         <li><a href="/contact" class="hover:text-gray-400">Contact</a></li>
       </ul>
+      <div class="dropdown-toggle flex lg:hidden cursor-pointer">
+        <i class="fas fa-bars text-2xl"></i>
+      </div>
+      <div class="dropdown-content hidden">
+        <ul class="flex flex-col absolute top-5 right-0 w-5/6 py4 bg-gray-800 text-2xl ">
+          <li><a href="/" class="hover:text-gray-400">Home</a></li>
+          <li><a href="/about" class="hover:text-gray-400">About</a></li>
+          <li><a href="/projects" class="hover:text-gray-400">Projects</a></li>
+          <li><a href="/contact" class="hover:text-gray-400">Contact</a></li>
+        </ul>
+      </div>
     </div>
   </nav>
 
-
   <!-- Main Content -->
-  <main class="mt-6">
- {{{body}}}
-  </main> 
-   
+  <main>
+    {{{body}}}
+  </main>
+
   <script>
-  document.addEventListener("DOMContentLoaded", function() {
-    const scrollIcon = document.getElementById("scroll-icon");
-    const nextSection = document.getElementById("about");
+    document.addEventListener("DOMContentLoaded", function() {
+      const scrollIcon = document.getElementById("scroll-icon");
+      const nextSection = document.getElementById("about");
 
-    scrollIcon.addEventListener("click", function() {
-      nextSection.scrollIntoView({ behavior: "smooth" });
+      scrollIcon.addEventListener("click", function() {
+        nextSection.scrollIntoView({ behavior: "smooth" });
+      });
+
+      const dropdownToggle = document.querySelector('.dropdown-toggle');
+      const dropdownContent = document.querySelector('.dropdown-content');
+
+      dropdownToggle.addEventListener('click', function(event) {
+        dropdownContent.classList.toggle('hidden');
+        event.stopPropagation();
+      });
+
+      document.addEventListener('click', function(event) {
+        if (!dropdownContent.contains(event.target) && !dropdownToggle.contains(event.target)) {
+          dropdownContent.classList.add('hidden');
+        }
+      });
     });
-  });
-</script>
-
-
+  </script>
 </body>
 </html>

@@ -1,14 +1,16 @@
-   {{#if message}}
-    <span class="bg-blue-100 text-blue-700 px-4 py-2 rounded-md block">{{message}}</span>
-    {{/if}}
+{{#if message}}
+<span class="bg-blue-100 text-blue-700 px-4 py-2 rounded-md block">{{message}}</span>
+{{/if}}
 <section id="contact" class="text-center min-h-screen py-10 bg-gray-900 animate-fadeIn">
   <h1 class="text-4xl font-bold mb-4 text-white">Contact Me</h1>
-  <form id="contactForm" action="/contact" method="post" class="space-y-4 max-w-md mx-auto">
-    <input type="text" name="name" placeholder="Name" class="w-full p-3 text-black  border rounded" required >
-    <input type="email" name="email" placeholder="Email" class="w-full p-3 text-black border rounded" required>
-    <textarea name="message" placeholder="Message" class="w-full p-3 text-black border rounded" required></textarea>
-    <button type="submit" class="bg-blue-500 text-white px-6 py-3 rounded hover:bg-blue-600">Send</button>
-  </form>
+  <div class="max-w-md mx-auto">
+    <form id="contactForm" action="/contact" method="post" class="space-y-4">
+      <input type="text" name="name" placeholder="Name" class="w-full p-3 text-black border rounded" required>
+      <input type="email" name="email" placeholder="Email" class="w-full p-3 text-black border rounded" required>
+      <textarea name="message" placeholder="Message" class="w-full p-3 text-black border rounded" required></textarea>
+      <button type="submit" class="bg-blue-500 text-white px-6 py-3 rounded hover:bg-blue-600 w-full">Send</button>
+    </form>
+  </div>
   <div class="mt-8">
     <h2 class="text-2xl font-semibold text-white">Connect with me:</h2>
     <div class="flex justify-center space-x-4 mt-4">

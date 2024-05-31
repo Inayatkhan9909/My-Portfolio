@@ -1,52 +1,47 @@
-<section id="projects" class="text-center min-h-screen py-10  bg-gray-900 animate-fadeIn">
+<section id="projects" class="text-center min-h-96 m-auto py-20 bg-gray-900 animate-fadeIn">
   <h1 class="text-4xl font-bold mb-4">My Projects</h1>
-  <div class="flex flex-col  gap-4">
+  <div class="flex flex-col gap-8 md:flex-row md:gap-16">
 
-    <div class="flex   bg-gray-900 p-6 rounded-lg shadow-2xl">
+    <div class="flex flex-col md:flex-row bg-gray-900 p-6 rounded-lg shadow-2xl">
       <!-- Left Side: Images -->
-      <div class="w-full lg:w-1/2 flex gap-4 items-center justify-center mb-4 lg:mb-0">
-
-        <div class="flex flex-col gap-1 h-full">
-          <img src="assets/Screenshot 2024-05-24 001543.png" width="450"  alt="Project Image"
-            class="rounded-lg shadow-lg max-w-full object-contain h-full">
-          <img src="assets/Screenshot 2024-05-24 001611.png" width="450"  alt="Project Image"
-            class="rounded-lg shadow-lg max-w-full object-contain h-full">
+      <div class="md:w-1/2 flex flex-col justify-center items-center mb-4 md:mb-0">
+        <div class="flex flex-col gap-4">
+          <img src="assets/Screenshot 2024-05-24 001543.png" width="100%" alt="Project Image"
+            class="rounded-lg shadow-lg max-w-full object-contain">
+          <img src="assets/Screenshot 2024-05-24 001611.png" width="100%" alt="Project Image"
+            class="rounded-lg shadow-lg max-w-full object-contain">
         </div>
-        <img src="assets/Screenshot 2024-05-24 001353.png" width="400"  alt="Project Image"
-          class="rounded-lg shadow-lg max-w-full object-contain  h-full">
       </div>
       <!-- Right Side: Details and Button -->
-     <div class="w-full lg:w-1/2 text-white p-4">
-    <h2 class="text-2xl font-bold mb-2">Internship and Job Providing Platform</h2>
-    <p class="mb-4">
-      This project is a web application built with ASP.NET Core and C# that facilitates the management of internships and job listings. It utilizes the Identity Framework for robust user authentication and authorization. The platform allows companies to post job openings and internships, and users can apply for these positions directly through the website.
-    </p>
-    <h3 class="text-xl font-semibold mb-2">Key Features:</h3>
-    <ul class="list-disc list-inside mb-4">
-      <li>User registration and login with role-based authorization.</li>
-      <li>Job and internship application management.</li>
-      <li>Secure user authentication using ASP.NET Core Identity.</li>
-      <li>Responsive design for seamless use across various devices.</li>
-    </ul>
-    <h3 class="text-xl font-semibold mb-2">Technologies Used:</h3>
-    <ul class="list-disc list-inside mb-4">
-      ASP.NET Core
-      C#
-      Entity Framework Core
-      ASP.NET Core Identity
-      SQL Server
-      Bootstrap for frontend design
-    </ul>
-    <a href="https://live-website-link.com" target="_blank"
-      class="bg-blue-500 text-white py-2 px-4 rounded-lg shadow hover:bg-blue-700 transition duration-300 ease-in-out">
-      Live Show
-    </a>
-  </div>
-
+      <div class="md:w-1/2 text-white p-4">
+        <h2 class="text-2xl font-bold mb-2">Internship and Job Providing Platform</h2>
+        <p class="mb-4">
+          This project is a web application built with ASP.NET Core and C# that facilitates the management of internships
+          and job listings. It utilizes the Identity Framework for robust user authentication and authorization. The
+          platform allows companies to post job openings and internships, and users can apply for these positions directly
+          through the website.
+        </p>
+        <h3 class="text-xl font-semibold mb-2">Key Features:</h3>
+        <ul class="list-disc list-inside mb-4">
+          <li>User registration and login with role-based authorization.</li>
+          <li>Job and internship application management.</li>
+          <li>Secure user authentication using ASP.NET Core Identity.</li>
+          <li>Responsive design for seamless use across various devices.</li>
+        </ul>
+        <h3 class="text-xl font-semibold mb-2">Technologies Used:</h3>
+        <ul class="list-disc list-inside mb-4">
+          <li>ASP.NET Core</li>
+          <li>C#</li>
+          <li>Entity Framework Core</li>
+          <li>ASP.NET Core Identity</li>
+          <li>SQL Server</li>
+          <li>Bootstrap for frontend design</li>
+        </ul>
+        <a href="https://internshub.bsite.net/" target="_blank"
+          class="bg-blue-500 text-white py-2 px-4 rounded-lg shadow hover:bg-blue-700 transition duration-300 ease-in-out">
+          Live Show
+        </a>
+      </div>
     </div>
-
-    {{!-- <div class=" bg-gray-900 p-6 rounded-lg shadow-lg">Project 2</div>
-    <div class=" bg-gray-900 p-6 rounded-lg shadow-lg">Project 3</div> --}}
   </div>
 </section>
-{{> footer}}
