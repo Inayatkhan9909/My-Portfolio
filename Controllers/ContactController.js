@@ -1,9 +1,10 @@
 const Contact = require("../Models/ContactModel");
 const transporter = require("../utils/Nodemailer");
+require("dotenv").config();
 
 const ContactController = async(req,res) =>{
     try {
-        console.log("hoojo")
+      
         const {name,email,message}= req.body;
                console.log(name)
                console.log(email)
@@ -14,10 +15,12 @@ const ContactController = async(req,res) =>{
           if(done)
             {
                 const sendmail = await transporter.sendMail({
-                    from: "rteja1230@gmail.com",
-                    to: `${email}`,
-                    subject: "change password",
-                    text: "link ym gholia",
+                    from: process.env.MY_EMAIL,
+                    to: process.env.MY_EMAIL,
+                    subject: `sender's email : ${email}`,
+                    name:`${name}`,
+                    text: `${message}`,
+                    replyTo:`${email}`
                 });
         
         
