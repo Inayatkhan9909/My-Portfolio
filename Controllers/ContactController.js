@@ -6,9 +6,6 @@ const ContactController = async(req,res) =>{
     try {
       
         const {name,email,message}= req.body;
-               console.log(name)
-               console.log(email)
-               console.log(message)
           const newMessage = await new Contact({name,email,message});
           const done = await newMessage.save();
 
