@@ -4,11 +4,11 @@ const path = require('path');
 const bodyParser = require("body-parser");
 const exphbs = require('express-handlebars');
 const app = express();
-const dbConnect = require("./config/dbConnect");
+// const dbConnect = require("./config/dbConnect");
 const ContactController = require("./Controllers/ContactController")
 require("dotenv").config();
 const port = process.env.PORT;
- dbConnect();
+//  dbConnect();
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.json());
 
