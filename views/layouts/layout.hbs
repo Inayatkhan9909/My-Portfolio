@@ -5,74 +5,88 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="/css/main.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-  <title>My Portfolio</title>
+  <title>{{title}}</title>
   <style>
-    html {
-      scroll-behavior: auto;
-    }
+  html {
+    scroll-behavior: auto;
+  }
 
-    .gradient-text {
-      background: linear-gradient(90deg, #ff7e5f, #e085db, #5a9fd3, #689341);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-size: 200% 200%;
-      animation: gradient-animation 4s linear infinite;
-    }
+  .gradient-text {
+    background: linear-gradient(90deg, #ff7e5f, #e085db, #5a9fd3, #689341);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200% 200%;
+    animation: gradient-animation 4s linear infinite;
+  }
 
-    @keyframes gradient-animation {
-      0% {
-        background-position: 0% 50%;
-      }
-      100% {
-        background-position: 100% 50%;
-      }
+  @keyframes gradient-animation {
+    0% {
+      background-position: 0% 50%;
     }
-
-    .skill-bar {
-      height: 20px;
-      border-radius: 10px;
+    100% {
+      background-position: 100% 50%;
     }
+  }
 
+  .skill-bar {
+    height: 20px;
+    border-radius: 10px;
+  }
+
+  .dropdown-content {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #2d2d2d;
+    width: 100%;
+    border: 1px solid #444;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+  }
+
+  .dropdown-content ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  .dropdown-content ul li a {
+    display: block;
+    padding: 15px 20px;
+    margin: 0;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    text-decoration: none;
+    border-bottom: 1px solid #444;
+    transition: background-color 0.3s, color 0.3s;
+  }
+
+  .dropdown-content ul li a:hover {
+    background-color: #555;
+    color: #ff7e5f;
+  }
+
+  @media (max-width: 640px) {
     .dropdown-content {
-      display: none;
-      flex-direction: column;
-      position: absolute;
-      top: 100%;
-      left: 0;
-      background-color: #333;
-      width: 100%;
-      z-index: 10;
+      display: flex;
     }
 
-    .dropdown-content a {
-      padding: 12px 20px;
-      width: 80%;
-      text-align: center;
-      border-bottom: 1px solid #444;
+    .dropdown-toggle {
+      display: flex;
     }
 
-    .dropdown-content a:hover {
-      background-color: #444;
-    }
-
-    @media (max-width: 640px) {
-      .dropdown-content {
-        display: flex;
-      }
-
-      .dropdown-toggle {
-        display: flex;
-      }
-
-      .nav-links {
-        display: none;
-      }
-    }
-
-    .hidden {
+    .nav-links {
       display: none;
     }
-  </style>
+  }
+
+  .hidden {
+    display: none;
+  }
+</style>
 </head>
 <body class="text-white bg-gray-900">
 
@@ -111,36 +125,6 @@
     {{{body}}}
   </main>
 
-  <script>
-    document.addEventListener("DOMContentLoaded", function() {
-      const scrollIcon = document.getElementById("scroll-icon");
-      const nextSection = document.getElementById("about");
-
-      scrollIcon.addEventListener("click", function() {
-        nextSection.scrollIntoView({ behavior: "smooth" });
-      });
-
-      const dropdownToggle = document.querySelector('.dropdown-toggle');
-      const dropdownContent = document.querySelector('.dropdown-content');
-
-      dropdownToggle.addEventListener('click', function(event) {
-        dropdownContent.classList.toggle('hidden');
-        event.stopPropagation();
-      });
-
-      document.addEventListener('click', function(event) {
-        if (!dropdownContent.contains(event.target) && !dropdownToggle.contains(event.target)) {
-          dropdownContent.classList.add('hidden');
-        }
-      });
-    });
-
-      setTimeout(() => {
-    const messageElement = document.getElementById('message');
-    if (messageElement) {
-      messageElement.style.display = 'none';
-    }
-  }, 5000);
-  </script>
+  <script src="/js/main.js"></script>
 </body>
 </html>
